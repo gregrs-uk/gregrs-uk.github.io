@@ -1,0 +1,17 @@
+title: Greg's blog
+author: Greg
+description: >- # ignore newlines
+  I'm a music teacher with an interest in open-source software,
+  programming and OpenStreetMap.
+twitter_username: gregrs_uk
+github_username:  gregrs-uk
+pgp_key_link: https://sks-keyservers.net/pks/lookup?op=get&search=0xD2E8592E64907C8A
+pgp_fingerprint: EBD1 077F CCDD 841E A505 3FAA D2E8 592E 6490 7C8A
+
+baseurl: "" # e.g. /blog
+url: "https://gregrs-uk.github.io" # e.g. http://example.com
+permalink: /:year-:month-:day/:title/
+
+markdown: kramdown
+theme: minima
+plugins:
