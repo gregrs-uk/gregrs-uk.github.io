@@ -7,6 +7,7 @@ twitter_username: gregrs_uk
 github_username:  gregrs-uk
 pgp_key_link: https://sks-keyservers.net/pks/lookup?op=get&search=0xD2E8592E64907C8A
 pgp_fingerprint: EBD1 077F CCDD 841E A505 3FAA D2E8 592E 6490 7C8A
+google_analytics: UA-15864457-5
 
 baseurl: "" # e.g. /blog
 url: "https://gregrs-uk.github.io" # e.g. http://example.com
