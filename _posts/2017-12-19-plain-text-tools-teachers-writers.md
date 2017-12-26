@@ -41,7 +41,7 @@ Markdown and Vim are a great combination when writing and editing text, but when
 
 To customise the appearance of the output file, it's possible to use a [YAML block](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block) at the top of your Markdown file, for example:
 
-```
+``` yaml
 ---
 fontfamily: charter
 fontsize: 12pt
@@ -50,7 +50,7 @@ fontsize: 12pt
 
 You can also supply command-line options to Pandoc. Here's a short BASH script I often use to convert Markdown documents into PDFs by running a command such as `~/md2pdf.sh my-document.md`:
 
-```
+``` shell
 NAME=`basename "$1" .md`
 pandoc "$1" -o "$NAME".pdf \
 	-V papersize:a4 \
