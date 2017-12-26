@@ -8,10 +8,10 @@ Want to create a MySQL query where a column is sorted in ascending order but wit
 
 Normally, a query with `ORDER BY column ASC` will display nulls first (at the top):
 
-{% highlight sql %}
+``` sql
 SELECT product, number FROM products
 ORDER BY number ASC;
-{% endhighlight %}
+```
 
 | product | number |
 | ------- | ------ |
@@ -25,10 +25,10 @@ ORDER BY number ASC;
 
 and a query with `ORDER BY column DESC` will display nulls last (at the bottom):
 
-{% highlight sql %}
+``` sql
 SELECT product, number FROM products
 ORDER BY number DESC;
-{% endhighlight %}
+```
 
 | product | number |
 | ------- | ------ |
@@ -42,10 +42,10 @@ ORDER BY number DESC;
 
 If you want to change the position of nulls in the results, you can use `ISNULL(column)`. The following query displays the number column in ascending order but with nulls last (at the bottom). I have included `ISNULL(number)` in the results table so that you can see its effect on the sorting, but you don't normally need to include it in the list of columns after `SELECT`, just in the `ORDER BY` section.
 
-{% highlight sql %}
+``` sql
 SELECT product, number, ISNULL(number) FROM products
 ORDER BY ISNULL(number) ASC, number ASC;
-{% endhighlight %}
+```
 
 | product | number | isnull(number) |
 | ------- | ------ | -------------- |
@@ -59,10 +59,10 @@ ORDER BY ISNULL(number) ASC, number ASC;
 
 and the following query displays the number column in descending order but with nulls first (at the top):
 
-{% highlight sql %}
+``` sql
 SELECT product, number, ISNULL(number) FROM products
 ORDER BY ISNULL(number) DESC, number DESC;
-{% endhighlight %}
+```
 
 | product | number | isnull(number) |
 | ------- | ------ | -------------- |
