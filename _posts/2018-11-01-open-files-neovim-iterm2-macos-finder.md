@@ -9,11 +9,8 @@ I wanted a way to automatically open certain file types using the command-line v
 Using Automator, it's possible to create an application with this functionality using an AppleScript. A similar process could be used to create an application launcher for other command-line programs, also allowing one or more file paths to be used as arguments.
 
 1. Install [NeoVim](https://neovim.io) and [iTerm2](https://iterm2.com) if you haven't already.
-
 2. Open Automator and create a new Application.
-
 3. Add a `Run AppleScript` action and paste in the code below. If iTerm is already running it will create a new window, and it will optionally open one or more files in different NeoVim tabs. If you run the action within Automator it may give you an error but it should work when you create an Application from it.
-
    ```applescript
    on run {input, parameters}
 
@@ -42,11 +39,13 @@ Using Automator, it's possible to create an application with this functionality 
 
    end run
    ```
-
 4. Save the Automator document as an Application in `/Applications`.
-
-5. Open `/Applications` and drag your new application to the Dock if you wish.
-
-6. Right-click a file of the type you want to automatically open in NeoVim (e.g. a Markdown (`.md`) file and click `Get Info`. Select `Other…` in the `Open with:` menu, navigate to your new application and click `Add`. Then click `Change All…` and all files with the same extension should now open in NeoVim.
+5. If you wish, you can change the application's icon.
+    1. Download [`neovim-mark.png`](https://github.com/neovim/neovim.github.io/blob/master/logos/neovim-mark.png) from the [NeoVim website repository](https://github.com/neovim/neovim.github.io).
+    2. Open this image in Preview and copy it to the clipboard.
+    3. Right-click your NeoVim application file and click `Get Info`.
+    4. Click on the icon at the top of the info window and paste the image you copied earlier.
+6. Open `/Applications` and drag your new application to the Dock if you wish.
+7. Right-click a file of the type you want to automatically open in NeoVim (e.g. a Markdown (`.md`) file and click `Get Info`. Select `Other…` in the `Open with:` menu, navigate to your new application and click `Add`. Then click `Change All…` and all files with the same extension should now open in NeoVim.
 
 If you have any questions or suggestions, why not get in touch with me on [Twitter](https://twitter.com/gregrs_uk)?
